@@ -1,13 +1,14 @@
 import dash
-from dash import dcc
-from dash import html
+from dash.dependencies import Output, Input
+import dash_core_components as dcc
+import dash_html_components as html
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 
 # Dataset 'Processing'
 
-df_emissions = pd.read_csv('emission_full.csv')
+df_emissions = pd.read_csv('data-visualizacion\emission_full.csv')
 
 df_emission_0 = df_emissions.loc[df_emissions['year']==2000]
 
